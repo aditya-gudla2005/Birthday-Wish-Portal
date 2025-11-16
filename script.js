@@ -145,7 +145,9 @@ function sendWish() {
   // Text beside angel
   const text = document.createElement("div");
   text.className = "wish-text";
-  text.innerHTML = "Your wish is in the universe now ✨";
+  text.innerHTML =
+  "Your wish is with the universe now.<br>The universe will do its job.<br>You do your job by staying kind, hopeful… and a little bit magical. ✨";
+
 
   // Append elements
   box.appendChild(angel);
@@ -177,6 +179,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
