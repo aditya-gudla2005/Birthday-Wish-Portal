@@ -319,6 +319,12 @@ h1, h2, h3 {
 }
 
 
+section h1, 
+section h2:not(.final-text), 
+section h3 {
+  text-shadow: 0 0 12px rgba(255,255,255,0.9);
+}
+
 
 
 
