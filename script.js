@@ -149,4 +149,23 @@ function sendWish() {
     document.getElementById("wishMessage").classList.remove("hidden");
   }, 3000);
 }
+function playMusic() {
+  const music = document.getElementById("bgMusic");
+  if (!music) {
+    console.log("❌ bgMusic element NOT found");
+    return;
+  }
+
+  console.log("🎵 Attempting to play music...");
+
+  music.load();   // ensures audio is fully loaded
+  music.volume = 0.5;
+
+  music.play().then(() => {
+    console.log("✅ Music is playing");
+  }).catch((err) => {
+    console.log("❌ Music play failed:", err);
+  });
+}
+
 
