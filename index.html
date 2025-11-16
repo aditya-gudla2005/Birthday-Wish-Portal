@@ -24,14 +24,14 @@
   </div>
 
   <div class="gift" onclick="showWish()">
-    🎁<p>Make a Wish</p>
+    🌠<p>Make a Wish</p>
   </div>
 </section>
 
 <section id="cake-section" class="hidden">
   <h2>Say "blow" to blow out the candles 🎤</h2>
-  <img id="cake" src="cake_on.png">
-  <button onclick="startListening()" class="listen-btn">Start Voice</button>
+  <img id="cake" src="cake_on.png" alt="cake">
+  <button id="listenBtn" onclick="startListening()" class="listen-btn">Start Voice</button>
   <p class="tip">Tip: If it doesn't hear you, tap once and say "blow".</p>
 </section>
 
@@ -47,13 +47,10 @@
 
   <button class="wish-btn" onclick="sendWish()">✨ Send Wish</button>
 
-  <div id="angelArea"></div>
+  <div id="angelArea" aria-hidden="true"></div>
   <h3 id="wishMessage" class="wish-message hidden">Your wish is in the universe now ✨</h3>
 </section>
-
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
