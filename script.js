@@ -123,34 +123,41 @@ function confetti() {
 // Make-a-wish behaviour
 function sendWish() {
   const wishInput = document.getElementById("wishInput");
-  const wish = (wishInput && wishInput.value || "").trim();
+  const wishBtn = document.querySelector(".wish-btn");
+  const wishMessage = document.getElementById("wishMessage");
+  const area = document.getElementById("angelArea");
+
+  const wish = wishInput.value.trim();
   if (!wish) return;
 
-  // hide previous final message and clear area
-  document.getElementById("wishMessage").classList.add("hidden");
-  const container = document.getElementById("angelArea");
-  container.innerHTML = "";
+  // hide the input and button
+  wishInput.style.display = "none";
+  wishBtn.style.display = "none";
 
-  // create angel and floating wish
+  // remove previous message
+  wishMessage.classList.add("hidden");
+  area.innerHTML = "";
+
+  // create angel
   const angel = document.createElement("div");
   angel.className = "angel";
-  angel.innerHTML = "👼";
+  angel.innerHTML = "w.jpg";
 
+  // floating wish
   const floatingWish = document.createElement("div");
   floatingWish.className = "wish-floating";
   floatingWish.innerText = wish;
 
-  container.appendChild(angel);
-  container.appendChild(floatingWish);
+  area.appendChild(angel);
+  area.appendChild(floatingWish);
 
-  // clear input for privacy
-  if (wishInput) wishInput.value = "";
-
-  // show final message after animation
+  // after angel animation finishes (3 sec)
   setTimeout(() => {
-    document.getElementById("wishMessage").classList.remove("hidden");
+    wishMessage.classList.remove("hidden");
+    wishMessage.style.animation = "fadeIn 2s ease forwards";
   }, 3000);
 }
+
 function playMusic() {
   if (musicStarted) {
     return; // prevent restarting
@@ -169,6 +176,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
