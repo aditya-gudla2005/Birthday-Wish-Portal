@@ -124,44 +124,40 @@ function confetti() {
 function sendWish() {
   const wishInput = document.getElementById("wishInput");
   const wishBtn = document.querySelector(".wish-btn");
-  const wishMessage = document.getElementById("wishMessage");
   const area = document.getElementById("angelArea");
 
-  const wish = wishInput.value.trim();
-  if (!wish) return;
-
-  // hide the input and button
+  // Hide wish input + button
   wishInput.style.display = "none";
   wishBtn.style.display = "none";
 
-  // remove previous message
-  wishMessage.classList.add("hidden");
+  // Clear previous content
   area.innerHTML = "";
 
-  // create angel
-const angel = document.createElement("img");
-angel.className = "angel";
-angel.src = "angel.png?v=" + Date.now(); // no-cache version
+  // Create pink box container
+  const box = document.createElement("div");
+  box.className = "wish-box";
 
+  // Angel image
+  const angel = document.createElement("img");
+  angel.src = "angel.png?v=" + Date.now();
+  angel.className = "wish-angel";
 
-  // floating wish
-  const floatingWish = document.createElement("div");
-  floatingWish.className = "wish-floating";
-  floatingWish.innerText = wish;
+  // Text beside angel
+  const text = document.createElement("div");
+  text.className = "wish-text";
+  text.innerHTML = "Your wish is in the universe now ✨";
 
-  area.appendChild(angel);
-  area.appendChild(floatingWish);
-  angel.onerror = () => console.log("❌ ANGEL IMAGE NOT FOUND");
-  angel.onload = () => console.log("✅ ANGEL IMAGE LOADED");
+  // Append elements
+  box.appendChild(angel);
+  box.appendChild(text);
+  area.appendChild(box);
 
-
-
-  // after angel animation finishes (3 sec)
+  // Trigger animation
   setTimeout(() => {
-    wishMessage.classList.remove("hidden");
-    wishMessage.style.animation = "fadeIn 2s ease forwards";
-  }, 3000);
+    box.classList.add("rise");
+  }, 100);
 }
+
 
 function playMusic() {
   if (musicStarted) {
@@ -181,6 +177,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
