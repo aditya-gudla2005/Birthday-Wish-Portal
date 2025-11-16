@@ -360,5 +360,22 @@ section:hover {
      0 0 8px rgba(255,215,0,0.7),
      0 0 16px rgba(255,215,0,0.5);
 }
+/* GLOBAL SNOWFALL */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 12px;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 9999;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(110vh) translateX(var(--drift)); }
+}
+
 
 
