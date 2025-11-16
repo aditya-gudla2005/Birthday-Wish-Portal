@@ -377,5 +377,24 @@ section:hover {
   100% { transform: translateY(110vh) translateX(var(--drift)); }
 }
 
+.confetti-drop {
+  position: fixed;
+  top: -10vh;
+  animation-name: confettiFall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
 
 
