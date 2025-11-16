@@ -152,23 +152,25 @@ function sendWish() {
   }, 3000);
 }
 function playMusic() {
-  const music = document.getElementById("bgMusic");
-  if (!music) {
-    console.log("❌ bgMusic element NOT found");
-    return;
+  if (musicStarted) {
+    return; // prevent restarting
   }
+  
+  const music = document.getElementById("bgMusic");
+  if (!music) return;
 
-  console.log("🎵 Attempting to play music...");
-
-  music.load();   // ensures audio is fully loaded
+  music.load();
   music.volume = 0.5;
 
   music.play().then(() => {
-    console.log("✅ Music is playing");
+    console.log("Music playing");
+    musicStarted = true;   // lock music on after first play
   }).catch((err) => {
-    console.log("❌ Music play failed:", err);
+    console.log("Autoplay blocked:", err);
   });
 }
+
+
 
 
 
