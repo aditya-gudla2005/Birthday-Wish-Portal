@@ -6,6 +6,18 @@
 </head>
 
 <body>
+  <div id="stars"></div>
+<script>
+for (let i = 0; i < 40; i++) {
+  const s = document.createElement("div");
+  s.className = "star";
+  s.style.setProperty("--x", Math.random());
+  s.style.setProperty("--y", Math.random());
+  s.style.setProperty("--d", Math.random()*2);
+  document.getElementById("stars").appendChild(s);
+}
+</script>
+
 
 <audio id="bgMusic" src="bg.mp3" loop></audio>
 
@@ -54,3 +66,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
