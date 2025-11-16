@@ -23,10 +23,13 @@ function showWish() {
 // Music autoplay
 function playMusic() {
   const music = document.getElementById("bgMusic");
-  if (!music) return;
+  music.load();                 // Force reload
   music.volume = 0.5;
-  music.play().catch(()=>{ /* user gesture required or autoplay blocked */ });
+  music.play().catch(err => {
+    console.log("Autoplay blocked:", err);
+  });
 }
+
 
 document.addEventListener("click", playMusic, { once: true });
 document.addEventListener("touchstart", playMusic, { once: true });
@@ -146,3 +149,4 @@ function sendWish() {
     document.getElementById("wishMessage").classList.remove("hidden");
   }, 3000);
 }
+
