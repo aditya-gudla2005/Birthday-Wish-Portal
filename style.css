@@ -148,13 +148,14 @@ body::before {
 
 /* Angel animation */
 .angel {
+  width: 60px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 60px;
   opacity: 0;
   animation: floatUp 3s ease-out forwards;
 }
+
 
 .wish-floating {
   position: absolute;
@@ -258,4 +259,5 @@ h1, h2, h3 {
   height: 180px;
   margin-top: 20px;
 }
+
 
