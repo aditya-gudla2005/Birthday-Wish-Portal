@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" src="bg.mp3" loop></audio>
+
+<section class="intro">
+  <h1>Choose Your Birthday Surprise 🎀</h1>
+  <div class="arrow">⌄</div>
+</section>
+
+<section class="gifts">
+  <div class="gift" onclick="showCake()">
+    🎂<p>Cake</p>
+  </div>
+
+  <div class="gift" onclick="showMessage()">
+    💌<p>Message</p>
+  </div>
+
+  <div class="gift" onclick="showSurprise()">
+    🎁<p>Surprise</p>
+  </div>
+</section>
+
+<section id="cake-section" class="hidden">
+  <h2>Say "blow" to blow out the candles 🎤</h2>
+  <img id="cake" src="cake_on.png">
+  <button onclick="startListening()" class="listen-btn">Start Voice</button>
+  <p class="tip">Tip: If it doesn't hear you, tap once and say "blow".</p>
+</section>
+
+<section id="message-section" class="hidden">
+  <h2 class="final-text">Happy Birthday Riya ❤️ You mean so much to me.</h2>
+  <div class="hearts"></div>
+</section>
+
+<section id="surprise-section" class="hidden">
+  <h2>🎉 Here’s a little surprise coming for you…</h2>
+  <p style="margin-top:10px;">Scroll down in a second 😉</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
