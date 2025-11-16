@@ -1,4 +1,22 @@
 // Show sections + auto-scroll
+// GLOBAL SNOWFALL
+function createSnow() {
+  const snow = document.getElementById("snow");
+  
+  for (let i = 0; i < 60; i++) {
+    const s = document.createElement("div");
+    s.className = "snowflake";
+    s.innerHTML = "•";
+    s.style.left = Math.random() * 100 + "vw";
+    s.style.fontSize = (8 + Math.random() * 10) + "px";
+    s.style.opacity = Math.random();
+    s.style.animationDuration = (3 + Math.random() * 5) + "s";
+    s.style.setProperty("--drift", (Math.random() * 80 - 40) + "px");
+    snow.appendChild(s);
+  }
+}
+createSnow();
+
 let musicStarted = false;
 
 function showCake() {
@@ -91,26 +109,27 @@ function startListening() {
 
 // Confetti
 function confetti() {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 120; i++) { // MORE CONFETTI
     const c = document.createElement("div");
-    c.innerHTML = "🎉";
+    c.innerHTML = ["🎉", "✨", "💖", "🌟", "💫"][Math.floor(Math.random()*5)];
     c.style.position = "fixed";
     c.style.left = Math.random()*100 + "vw";
     c.style.top = "-20px";
-    c.style.fontSize = (18 + Math.floor(Math.random()*18)) + "px";
-    c.style.transition = "3s";
+    c.style.fontSize = (20 + Math.random()*20) + "px";
+    c.style.transition = "4s";
     c.style.pointerEvents = "none";
     document.body.appendChild(c);
 
     setTimeout(() => {
-      c.style.top = (110 + Math.random()*30) + "vh";
+      c.style.top = "120vh";
       c.style.opacity = "0";
-      c.style.transform = `rotate(${Math.random()*360}deg)`;
-    }, 50);
+      c.style.transform = `rotate(${Math.random()*720}deg)`;
+    }, 20);
 
-    setTimeout(() => c.remove(), 3200);
+    setTimeout(() => c.remove(), 4000);
   }
 }
+
 
 // Make-a-wish behaviour
 function sendWish() {
@@ -171,6 +190,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
