@@ -40,11 +40,19 @@
   <div class="hearts"></div>
 </section>
 
-<section id="surprise-section" class="hidden">
-  <h2>🎉 Here’s a little surprise coming for you…</h2>
-  <p style="margin-top:10px;">Scroll down in a second 😉</p>
+<section id="wish-section" class="hidden">
+  <h2 class="wish-title">Make a Wish ✨</h2>
+
+  <input id="wishInput" class="wish-input" placeholder="Type your wish here…" />
+
+  <button class="wish-btn" onclick="sendWish()">✨ Send Wish</button>
+
+  <div id="angelArea"></div>
+  <h3 id="wishMessage" class="wish-message hidden">Your wish is in the universe now ✨</h3>
 </section>
+
 
 <script src="script.js"></script>
 </body>
 </html>
+
