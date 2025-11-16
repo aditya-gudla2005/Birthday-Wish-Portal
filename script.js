@@ -139,9 +139,9 @@ function sendWish() {
   area.innerHTML = "";
 
   // create angel
-  const angel = document.createElement("div");
+  const angel = document.createElement("img");
   angel.className = "angel";
-  angel.innerHTML = "w.jpg";
+  angel.innerHTML = "angel.png";
 
   // floating wish
   const floatingWish = document.createElement("div");
@@ -176,6 +176,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
