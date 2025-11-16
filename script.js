@@ -93,4 +93,11 @@ function sendWish() {
   }, 3000);
 }
 
+function showWish() {
+  playMusic();
+  const sec = document.getElementById("wish-section");
+  sec.classList.remove("hidden");
+  sec.scrollIntoView({ behavior: "smooth" });
+}
+
 
