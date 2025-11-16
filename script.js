@@ -139,9 +139,10 @@ function sendWish() {
   area.innerHTML = "";
 
   // create angel
-  const angel = document.createElement("img");
-  angel.className = "angel";
-  angel.innerHTML = "./angel.png";
+const angel = document.createElement("img");
+angel.className = "angel";
+angel.src = "angel.png?v=" + Date.now(); // no-cache version
+
 
   // floating wish
   const floatingWish = document.createElement("div");
@@ -152,7 +153,6 @@ function sendWish() {
   area.appendChild(floatingWish);
   angel.onerror = () => console.log("❌ ANGEL IMAGE NOT FOUND");
   angel.onload = () => console.log("✅ ANGEL IMAGE LOADED");
-  angel.src = "angel.png?v=" + Date.now();
 
 
 
@@ -181,6 +181,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
