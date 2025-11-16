@@ -90,3 +90,70 @@ body {
   color: #e74d89;
   line-height: 1.5;
 }
+/* Wish section */
+.wish-title {
+  margin-top: 80px;
+  font-size: 32px;
+  color: #e45598;
+}
+
+.wish-input {
+  margin-top: 20px;
+  padding: 12px;
+  width: 280px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid #ffb7d8;
+  outline: none;
+  background: #fff1f7;
+}
+
+.wish-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  background: #ff88c6;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#angelArea {
+  position: relative;
+  height: 200px;
+  margin-top: 30px;
+}
+
+/* Angel animation */
+.angel {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px;
+  opacity: 0;
+  animation: floatUp 3s ease-out forwards;
+}
+
+.wish-floating {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  opacity: 0;
+  animation: floatUp 3s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% { top: 120px; opacity: 0; }
+  40% { opacity: 1; }
+  100% { top: -60px; opacity: 0; }
+}
+
+.wish-message {
+  margin-top: 30px;
+  font-size: 26px;
+  color: #d94888;
+}
+
+
