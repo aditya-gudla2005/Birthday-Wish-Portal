@@ -179,7 +179,7 @@ function playMusic() {
   if (!music) return;
 
   music.load();
-  music.volume = 0.5;
+  music.volume = 0.25;
 
   music.play().then(() => {
     console.log("Music playing");
@@ -188,6 +188,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
