@@ -242,7 +242,8 @@ h1, h2, h3 {
   color: #fff !important;
 }
 #message-section .final-text {
-  text-shadow: 0 0 8px rgba(255,255,255,0.9);
+  text-shadow: none;
+  color: #ffffff;
 }
 @keyframes fadeIn {
   0% { opacity: 0; transform: scale(0.95); }
@@ -302,6 +303,7 @@ h1, h2, h3 {
   line-height: 1.3;
   text-align: left;
 }
+
 
 
 
