@@ -150,6 +150,9 @@ function sendWish() {
 
   area.appendChild(angel);
   area.appendChild(floatingWish);
+  angel.onerror = () => console.log("❌ ANGEL IMAGE NOT FOUND");
+  angel.onload = () => console.log("✅ ANGEL IMAGE LOADED");
+
 
   // after angel animation finishes (3 sec)
   setTimeout(() => {
@@ -176,6 +179,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
