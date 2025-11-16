@@ -109,26 +109,24 @@ function startListening() {
 
 // Confetti
 function confetti() {
-  for (let i = 0; i < 120; i++) { // MORE CONFETTI
+  const total = 120; // how many pieces
+  for (let i = 0; i < total; i++) {
     const c = document.createElement("div");
-    c.innerHTML = ["🎉", "✨", "💖", "🌟", "💫"][Math.floor(Math.random()*5)];
-    c.style.position = "fixed";
-    c.style.left = Math.random()*100 + "vw";
-    c.style.top = "-20px";
-    c.style.fontSize = (20 + Math.random()*20) + "px";
-    c.style.transition = "4s";
-    c.style.pointerEvents = "none";
+    c.className = "confetti-drop";
+    c.innerHTML = ["🎉","✨","💖","💛","💗"][Math.floor(Math.random()*5)];
+
+    const size = 20 + Math.random() * 20;
+    c.style.fontSize = size + "px";
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.animationDuration = (3 + Math.random() * 3) + "s";
+    c.style.opacity = (0.7 + Math.random()*0.3);
+
     document.body.appendChild(c);
 
-    setTimeout(() => {
-      c.style.top = "120vh";
-      c.style.opacity = "0";
-      c.style.transform = `rotate(${Math.random()*720}deg)`;
-    }, 20);
-
-    setTimeout(() => c.remove(), 4000);
+    setTimeout(() => c.remove(), 6000);
   }
 }
+
 
 
 // Make-a-wish behaviour
@@ -190,6 +188,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
