@@ -69,3 +69,28 @@ function confetti() {
     setTimeout(() => c.remove(), 2800);
   }
 }
+function sendWish() {
+  const wish = document.getElementById("wishInput").value.trim();
+  if (!wish) return;
+
+  // Create angel emoji
+  const angel = document.createElement("div");
+  angel.className = "angel";
+  angel.innerHTML = "👼";
+
+  const floatingWish = document.createElement("div");
+  floatingWish.className = "wish-floating";
+  floatingWish.innerHTML = wish;
+
+  const container = document.getElementById("angelArea");
+  container.innerHTML = ""; // Clear previous animations
+  container.appendChild(angel);
+  container.appendChild(floatingWish);
+
+  // Show final message after animation
+  setTimeout(() => {
+    document.getElementById("wishMessage").classList.remove("hidden");
+  }, 3000);
+}
+
+
