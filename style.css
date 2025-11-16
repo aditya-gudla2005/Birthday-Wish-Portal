@@ -42,15 +42,19 @@ body::before {
 /* Gifts */
 .gifts {
   display: flex;
-  justify-content: center;
-  gap: 60px;
-  padding: 50px 0;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 
 .gift {
   font-size: 70px;
   cursor: pointer;
   transition: transform 0.3s;
+  text-align: center;
+  width: 250px;
 }
 
 .gift:hover {
@@ -305,3 +309,4 @@ section:hover {
 #message-section .final-text {
   text-shadow: none !important;
 }
+
