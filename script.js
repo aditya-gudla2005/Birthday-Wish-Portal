@@ -22,15 +22,7 @@ function showWish() {
   sec.scrollIntoView({ behavior: "smooth" });
 }
 
-// Music autoplay
-function playMusic() {
-  const music = document.getElementById("bgMusic");
-  music.load();                 // Force reload
-  music.volume = 0.5;
-  music.play().catch(err => {
-    console.log("Autoplay blocked:", err);
-  });
-}
+
 
 
 document.addEventListener("click", playMusic, { once: true });
@@ -179,6 +171,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
