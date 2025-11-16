@@ -327,6 +327,15 @@ section h3 {
 
 
 
+/* FORCE glow for section headings (cake, message title, wish title, intro) */
+.intro h1,
+#wish-section .wish-title,
+#cake-section h2,
+#message-section h2:not(.final-text),
+.gifts + section h2 {
+  text-shadow: 0 0 12px rgba(255,255,255,0.9) !important;
+}
+
 
 
 
