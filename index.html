@@ -29,25 +29,24 @@ for (let i = 0; i < 40; i++) {
 </section>
 
 <section class="gifts">
-  <div class="gift" onclick="showCake()">
-    🎂<p>Cake</p>
+
+  <div class="gift-card" onclick="showCake()">
+    <div class="icon">🎂</div>
+    <div class="label">Cake</div>
   </div>
 
-  <div class="gift" onclick="showMessage()">
-    💌<p>Message</p>
+  <div class="gift-card" onclick="showMessage()">
+    <div class="icon">💌</div>
+    <div class="label">Message</div>
   </div>
 
-  <div class="gift" onclick="showWish()">
-    🌠<p>Make a Wish</p>
+  <div class="gift-card" onclick="showWish()">
+    <div class="icon">🌠</div>
+    <div class="label">Make a Wish</div>
   </div>
+
 </section>
 
-<section id="cake-section" class="hidden">
-  <h2>Say "blow" to blow out the candles 🎤</h2>
-  <img id="cake" src="cake_on.png" alt="cake">
-  <button id="listenBtn" onclick="startListening()" class="listen-btn">Start Voice</button>
-  <p class="tip">Tip: If it doesn't hear you, tap once and say "blow".</p>
-</section>
 
 <section id="message-section" class="hidden">
   <h2 class="final-text">Happy Birthday Riya ❤️ You mean so much to me.</h2>
@@ -71,6 +70,7 @@ for (let i = 0; i < 40; i++) {
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
