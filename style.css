@@ -308,6 +308,12 @@ h1, h2, h3 {
   text-align: left;
 }
 
+.final-text {
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
 
 
 
