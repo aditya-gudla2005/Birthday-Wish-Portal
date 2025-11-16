@@ -180,6 +180,8 @@ function playMusic() {
   });
 }
 
+angel.src = "angel.png?v=" + Date.now();
+
 
 
 
