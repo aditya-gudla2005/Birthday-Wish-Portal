@@ -264,7 +264,7 @@ section:hover {
 }
 
 .wish-angel {
-  width: 60px;
+  width: 120px;
   height: auto;
 }
 
@@ -395,6 +395,7 @@ section:hover {
     transform: translateY(110vh) rotate(360deg);
   }
 }
+
 
 
 
