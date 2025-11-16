@@ -153,7 +153,7 @@ body::before {
 
 /* Angel animation */
 .angel {
-  width: 70px;
+  width: 120px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -313,5 +313,6 @@ section:hover {
 #message-section .final-text {
   text-shadow: none !important;
 }
+
 
 
