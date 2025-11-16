@@ -1,10 +1,26 @@
+/* Full-screen background with parallax effect */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #ffeaf4;
-  text-align: center;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   overflow-x: hidden;
+  color: white;
 }
+
+/* Soft overlay to make text readable */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.35);  /* darkness adjust here */
+  backdrop-filter: blur(2px);    /* slight dreamy blur */
+  z-index: -1;
+}
+
 
 /* Intro */
 .intro {
@@ -160,3 +176,4 @@ body {
   font-size: 26px;
   color: #d94888;
 }
+
