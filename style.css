@@ -339,5 +339,28 @@ section h3 {
 
 
 
+/* Restore glow clearly above glass blur */
+.intro h1,
+#cake-section h2,
+#wish-section .wish-title {
+  position: relative;
+  color: #fff;
+}
+
+.intro h1::after,
+#cake-section h2::after,
+#wish-section .wish-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.9) 15%, transparent 70%);
+  filter: blur(18px);
+  z-index: -1;
+}
+
 
 
