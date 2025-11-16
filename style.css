@@ -253,3 +253,9 @@ h1, h2, h3 {
 }
 
 
+#angelArea {
+  position: relative;
+  height: 180px;
+  margin-top: 20px;
+}
+
