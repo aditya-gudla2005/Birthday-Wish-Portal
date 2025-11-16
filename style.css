@@ -238,7 +238,7 @@ h1, h2, h3 {
 }
 
 #message-section {
-  background: rgba(0, 0, 0, 0.55); 
+  background: rgba(0, 0, 0, 0.55);
   color: #ffffff;
   padding: 50px 30px;
   border-radius: 20px;
@@ -246,9 +246,13 @@ h1, h2, h3 {
 }
 
 #message-section .final-text {
-  text-shadow: none;
   color: #ffffff;
+  text-shadow: none;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
 }
+
 @keyframes fadeIn {
   0% { opacity: 0; transform: scale(0.95); }
   100% { opacity: 1; transform: scale(1); }
@@ -313,6 +317,7 @@ h1, h2, h3 {
   line-height: 1.4;
   font-weight: 600;
 }
+
 
 
 
