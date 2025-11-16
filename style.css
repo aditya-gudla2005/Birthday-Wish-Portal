@@ -70,6 +70,10 @@ body {
 }
 
 /* Hearts */
+.hearts {
+  position: relative;
+  height: 60px;
+}
 .hearts::before,
 .hearts::after {
   content: "💗";
@@ -123,6 +127,7 @@ body {
   position: relative;
   height: 200px;
   margin-top: 30px;
+  overflow: visible;
 }
 
 /* Angel animation */
@@ -155,5 +160,3 @@ body {
   font-size: 26px;
   color: #d94888;
 }
-
-
