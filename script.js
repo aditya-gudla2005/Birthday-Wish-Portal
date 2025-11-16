@@ -75,7 +75,7 @@ function startListening() {
   recog.onresult = function(event) {
     const command = event.results[0][0].transcript.toLowerCase();
     console.log("Heard:", command);
-    if (command.includes("blow")) {
+    if (command.includes("i wish")) {
       const cakeImg = document.getElementById("cake");
       if (cakeImg) cakeImg.src = "cake_off.png";
       confetti();
@@ -188,6 +188,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
