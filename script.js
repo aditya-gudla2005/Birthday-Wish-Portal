@@ -75,13 +75,13 @@ function startListening() {
   recog.onresult = function(event) {
     const command = event.results[0][0].transcript.toLowerCase();
     console.log("Heard:", command);
-    if (command.includes("i wish")) {
+    if (command.includes("make a wish")) {
       const cakeImg = document.getElementById("cake");
       if (cakeImg) cakeImg.src = "cake_off.png";
       confetti();
     } else {
       // give feedback
-      alert("I heard: " + command + "\nTry saying 'blow' to blow out the candles.");
+      alert("I heard: " + command + "\nTry saying 'make a wish' to blow out the candles.");
     }
   };
 
@@ -188,6 +188,7 @@ function playMusic() {
     console.log("Autoplay blocked:", err);
   });
 }
+
 
 
 
