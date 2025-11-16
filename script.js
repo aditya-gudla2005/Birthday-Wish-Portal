@@ -1,4 +1,6 @@
 // Show sections + auto-scroll
+let musicStarted = false;
+
 function showCake() {
   playMusic();
   const sec = document.getElementById("cake-section");
@@ -167,5 +169,6 @@ function playMusic() {
     console.log("❌ Music play failed:", err);
   });
 }
+
 
 
