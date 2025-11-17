@@ -396,6 +396,65 @@ section:hover {
   }
 }
 
+/* Background sparkles */
+#sparkle-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #ffe9ff, #ffa8e8);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: floatSparkle 6s linear infinite;
+  box-shadow: 0 0 8px #ffc9f5;
+}
+
+@keyframes floatSparkle {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-120px) scale(1.4); opacity: 0; }
+}
+/* Cake shake animation */
+@keyframes cakeShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+.cake-shake {
+  animation: cakeShake 0.4s ease;
+}
+
+/* Poof smoke */
+.poof {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  font-size: 40px;
+  opacity: 0;
+  animation: poofUp 1s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes poofUp {
+  0% { opacity: 0; transform: translate(-50%, 10px) scale(0.6); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -40px) scale(1.2); }
+}
+
 
 
 
