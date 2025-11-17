@@ -1,5 +1,29 @@
 // Show sections + auto-scroll
 // GLOBAL SNOWFALL
+function smokePoof(parent) {
+  const symbols = ["💨","🌫️","💭"];
+  
+  for (let i = 0; i < 3; i++) {
+    const p = document.createElement("div");
+    p.className = "poof";
+    p.innerHTML = symbols[i];
+
+    const offsetX = (Math.random() * 50) - 25;
+    const offsetY = -40 - Math.random() * 20;
+
+    p.style.transform = `translate(-50%, 0)`;
+    parent.appendChild(p);
+
+    requestAnimationFrame(() => {
+      p.style.transition = "1.1s ease-out";
+      p.style.opacity = "0";
+      p.style.transform = `translate(calc(-50% + ${offsetX}px), ${offsetY}px) scale(1.4)`;
+    });
+
+    setTimeout(() => p.remove(), 1200);
+  }
+}
+
 function createSnow() {
   const snow = document.getElementById("snow");
   
@@ -229,6 +253,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
