@@ -591,22 +591,19 @@ section:hover {
 /* Force correct background on all pages */
 
 /* Desktop default */
+/* DESKTOP */
 body {
-  background-image: url('bg_desktop.jpg') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-attachment: fixed !important;
+  background: url('bg_desktop.jpg') center center / cover no-repeat fixed !important;
 }
 
-/* Mobile override */
+/* MOBILE */
 @media (max-width: 768px) {
   body {
-    background-image: url('bg_mobile.jpg') !important;
-    background-size: cover !important;
-    background-position: top center !important;
-    background-attachment: fixed !important;
+    background: url('bg_mobile.jpg') top center / cover no-repeat fixed !important;
   }
 }
+
+
 
 
 
