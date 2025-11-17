@@ -469,6 +469,19 @@ section:hover {
 }
 
 
+.bear {
+  width: 90px;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: bearFloat 3s ease-in-out infinite;
+}
+
+@keyframes bearFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
 
 
 
