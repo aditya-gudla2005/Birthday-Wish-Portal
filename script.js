@@ -97,19 +97,30 @@ function startListening() {
   };
 
 recog.onresult = function(event) {
+  const command = event.results[0][0].transcript.toLowerCase();
+  console.log("Heard:", command);
 
-  // ANYTHING she says triggers the effect
-  const cakeImg = document.getElementById("cake");
+  if (command.includes("hello")) {
+    const cakeImg = document.getElementById("cake");
 
-  cakeImg.src = "cake_off.png";
+    // change cake image
+    cakeImg.src = "cake_off.png";
 
-  cakeImg.classList.add("cake-shake");
-  setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
+    // shake animation
+    cakeImg.classList.add("cake-shake");
+    setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
 
-  smokePoof(cakeImg.parentElement);
+    // magical smoke
+    smokePoof(cakeImg.parentElement);
 
-  magicConfetti();
+    // magical confetti
+    magicConfetti();
+
+  } else {
+    alert("I heard: " + command + "\nTry saying 'hello' to blow out the candles.");
+  }
 };
+
 
 
   recog.onerror = function(e) {
@@ -245,6 +256,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
