@@ -129,21 +129,24 @@ function magicConfetti() {
     c.innerHTML = "🎉";
     c.style.position = "fixed";
     c.style.left = Math.random() * 100 + "vw";
-    c.style.top = "-20px";
+    c.style.top = "-30px";
     c.style.fontSize = (20 + Math.random() * 15) + "px";
-    c.style.transition = "4s";
     c.style.pointerEvents = "none";
+    c.style.zIndex = "999999";     // ⭐ KEEP CONFETTI ABOVE ALL
+    c.style.opacity = "1";
     document.body.appendChild(c);
 
-    setTimeout(() => {
-      c.style.top = "120vh";
+    // force first paint BEFORE transition starts
+    requestAnimationFrame(() => {
+      c.style.transition = "transform 4s linear, opacity 4s linear";
+      c.style.transform = `translateY(120vh) rotate(${Math.random()*360}deg)`;
       c.style.opacity = "0";
-      c.style.transform = `rotate(${Math.random()*360}deg)`;
-    }, 50);
+    });
 
     setTimeout(() => c.remove(), 4500);
   }
 }
+
 
 
 
@@ -225,6 +228,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
