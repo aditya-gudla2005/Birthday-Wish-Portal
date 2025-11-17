@@ -440,20 +440,21 @@ section:hover {
 /* Poof smoke */
 .poof {
   position: absolute;
+  top: 20px;
   left: 50%;
-  transform: translateX(-50%);
-  top: -20px;
-  font-size: 40px;
-  opacity: 0;
-  animation: poofUp 1s ease-out forwards;
+  font-size: 38px;
+  opacity: 1;
   pointer-events: none;
+  transform: translateX(-50%);
 }
+
 
 @keyframes poofUp {
   0% { opacity: 0; transform: translate(-50%, 10px) scale(0.6); }
   50% { opacity: 1; }
   100% { opacity: 0; transform: translate(-50%, -40px) scale(1.2); }
 }
+
 
 
 
