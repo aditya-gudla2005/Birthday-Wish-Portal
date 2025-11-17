@@ -76,10 +76,25 @@ function startListening() {
     const command = event.results[0][0].transcript.toLowerCase();
     console.log("Heard:", command);
     if (command.includes("make a wish")) {
-      const cakeImg = document.getElementById("cake");
-      if (cakeImg) cakeImg.src = "cake_off.png";
-      confetti();
-    } else {
+  const cakeImg = document.getElementById("cake");
+
+  // change cake image
+  cakeImg.src = "cake_off.png";
+
+  // shake animation
+  cakeImg.classList.add("cake-shake");
+  setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
+
+  // smoke poof
+  const poof = document.createElement("div");
+  poof.className = "poof";
+  poof.innerHTML = "💨";
+  cakeImg.parentElement.appendChild(poof);
+  setTimeout(() => poof.remove(), 1200);
+
+  // improved confetti
+  magicConfetti();
+} else {
       // give feedback
       alert("I heard: " + command + "\nTry saying 'make a wish' to blow out the candles.");
     }
@@ -210,6 +225,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
