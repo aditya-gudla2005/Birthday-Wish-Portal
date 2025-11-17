@@ -101,23 +101,7 @@ body::before {
 }
 
 /* Hearts */
-.hearts {
-  position: relative;
-  height: 60px;
-}
 
-.hearts::before,
-.hearts::after {
-  content: "💗";
-  position: absolute;
-  font-size: 40px;
-  animation: float 3s infinite ease-in-out;
-}
-
-@keyframes float {
-  0% {transform: translateY(0);}
-  100% {transform: translateY(-40px);}
-}
 
 /* Final text */
 .final-text {
@@ -595,6 +579,7 @@ section:hover {
   75% { transform: translateX(-4px); }
   100% { transform: translateX(0); }
 }
+
 
 
 
