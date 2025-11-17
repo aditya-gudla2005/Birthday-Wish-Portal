@@ -1,5 +1,26 @@
 // Show sections + auto-scroll
 // GLOBAL SNOWFALL
+function blowCandles() {
+  const cakeImg = document.getElementById("cake");
+
+  // stop flicker if applied
+  cakeImg.classList.remove("flicker");
+
+  // switch image
+  cakeImg.src = "cake_off.png";
+
+  // shake
+  cakeImg.classList.add("cake-shake");
+  setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
+
+  // smoke
+  smokePoof(cakeImg.parentElement);
+
+  // confetti
+  magicConfetti();
+}
+
+
 function smokePoof(parent) {
   const symbols = ["💨","🌫️","💭"];
 
@@ -116,25 +137,12 @@ recog.onresult = function(event) {
   console.log("Heard:", command);
 
   if (command.includes("hello")) {
-    const cakeImg = document.getElementById("cake");
-    cakeImg.classList.remove("flicker");
-    // change cake image
-    cakeImg.src = "cake_off.png";
-
-    // shake animation
-    cakeImg.classList.add("cake-shake");
-    setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
-
-    // magical smoke
-    smokePoof(cakeImg.parentElement);
-
-    // magical confetti
-    magicConfetti();
-
+    blowCandles();   // <— now everything runs from ONE function
   } else {
     alert("I heard: " + command + "\nTry saying 'hello' to blow out the candles.");
   }
 };
+
 
 
 
@@ -271,6 +279,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
