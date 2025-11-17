@@ -86,11 +86,7 @@ function startListening() {
   setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
 
   // smoke poof
-  const poof = document.createElement("div");
-  poof.className = "poof";
-  poof.innerHTML = "💨";
-  cakeImg.parentElement.appendChild(poof);
-  setTimeout(() => poof.remove(), 1200);
+  smokePoof(cakeImg.parentElement);
 
   // improved confetti
   magicConfetti();
@@ -124,28 +120,33 @@ function startListening() {
 
 // Confetti
 function magicConfetti() {
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 80; i++) {
     const c = document.createElement("div");
-    c.innerHTML = "🎉";
+    c.innerHTML = ["🎉","✨","💖","💛","💜","🌟"][Math.floor(Math.random()*6)];
+    
     c.style.position = "fixed";
     c.style.left = Math.random() * 100 + "vw";
-    c.style.top = "-30px";
-    c.style.fontSize = (20 + Math.random() * 15) + "px";
+    c.style.top = (-10 - Math.random() * 40) + "vh"; 
+    c.style.fontSize = (18 + Math.random() * 18) + "px";
     c.style.pointerEvents = "none";
-    c.style.zIndex = "999999";     // ⭐ KEEP CONFETTI ABOVE ALL
-    c.style.opacity = "1";
+    c.style.zIndex = "999999";
+
     document.body.appendChild(c);
 
-    // force first paint BEFORE transition starts
+    // Random fall time & sideways drift
+    const duration = 3 + Math.random() * 3;
+    const drift = Math.random() * 60 - 30; // left/right movement
+
     requestAnimationFrame(() => {
-      c.style.transition = "transform 4s linear, opacity 4s linear";
-      c.style.transform = `translateY(120vh) rotate(${Math.random()*360}deg)`;
+      c.style.transition = `transform ${duration}s linear, opacity ${duration}s linear`;
+      c.style.transform = `translate(${drift}px, 120vh) rotate(${Math.random()*360}deg)`;
       c.style.opacity = "0";
     });
 
-    setTimeout(() => c.remove(), 4500);
+    setTimeout(() => c.remove(), duration * 1000 + 200);
   }
 }
+
 
 
 
@@ -228,6 +229,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
