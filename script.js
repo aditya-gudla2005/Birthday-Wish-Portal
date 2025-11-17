@@ -2,27 +2,37 @@
 // GLOBAL SNOWFALL
 function smokePoof(parent) {
   const symbols = ["💨","🌫️","💭"];
-  
+
   for (let i = 0; i < 3; i++) {
     const p = document.createElement("div");
     p.className = "poof";
     p.innerHTML = symbols[i];
 
-    const offsetX = (Math.random() * 50) - 25;
-    const offsetY = -40 - Math.random() * 20;
+    // RANDOM START POSITION above the cake
+    const startX = (Math.random() * 80) - 40; // -40 to +40px left/right
+    const startY = -20 - Math.random() * 20;  // a bit above cake
 
-    p.style.transform = `translate(-50%, 0)`;
+    p.style.position = "absolute";
+    p.style.left = `calc(50% + ${startX}px)`;
+    p.style.top = `calc(50% + ${startY}px)`;
+    p.style.opacity = "1";
+
     parent.appendChild(p);
 
+    // RANDOM DRIFT PATH upward
+    const driftX = (Math.random() * 80) - 40;
+    const driftY = -60 - Math.random() * 40;
+
     requestAnimationFrame(() => {
-      p.style.transition = "1.1s ease-out";
+      p.style.transition = "1.2s ease-out";
+      p.style.transform = `translate(${driftX}px, ${driftY}px) scale(1.6)`;
       p.style.opacity = "0";
-      p.style.transform = `translate(calc(-50% + ${offsetX}px), ${offsetY}px) scale(1.4)`;
     });
 
-    setTimeout(() => p.remove(), 1200);
+    setTimeout(() => p.remove(), 1300);
   }
 }
+
 
 function createSnow() {
   const snow = document.getElementById("snow");
@@ -48,7 +58,12 @@ function showCake() {
   const sec = document.getElementById("cake-section");
   sec.classList.remove("hidden");
   sec.scrollIntoView({ behavior: "smooth" });
+
+  // Start candle flicker
+  const cakeImg = document.getElementById("cake");
+  cakeImg.classList.add("flicker");
 }
+
 
 function showMessage() {
   playMusic();
@@ -102,7 +117,7 @@ recog.onresult = function(event) {
 
   if (command.includes("hello")) {
     const cakeImg = document.getElementById("cake");
-
+    cakeImg.classList.remove("flicker");
     // change cake image
     cakeImg.src = "cake_off.png";
 
@@ -147,9 +162,9 @@ recog.onresult = function(event) {
 
 // Confetti
 function magicConfetti() {
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 150; i++) {
     const c = document.createElement("div");
-    c.innerHTML = ["🎉","✨","💖","💛","💜","🌟"][Math.floor(Math.random()*6)];
+    c.innerHTML = ["🎉","✨","💖","💛","💜","🌟","🧁","🎀","💫","💕","🎀"][Math.floor(Math.random()*6)];
     
     c.style.position = "fixed";
     c.style.left = Math.random() * 100 + "vw";
@@ -256,6 +271,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
