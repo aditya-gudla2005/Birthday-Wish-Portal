@@ -1,12 +1,24 @@
 /* Full-screen background with parallax effect */
+/* Full-screen background with parallax effect */
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background: url('bg.jpg') no-repeat center center fixed;
+
+  /* DESKTOP BACKGROUND */
+  background: url('bg_desktop.jpg') no-repeat center center fixed;
   background-size: cover;
+
   overflow-x: hidden;
   color: white;
 }
+/* MOBILE BACKGROUND (portrait image) */
+@media (max-width: 768px) {
+  body {
+    background: url('bg_mobile.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
 
 /* Soft overlay to make text readable */
 body::before {
@@ -493,6 +505,7 @@ section:hover {
   50% { transform: translateY(-6px); }
   100% { transform: translateY(0px); }
 }
+
 
 
 
