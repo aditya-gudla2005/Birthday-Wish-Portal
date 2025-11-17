@@ -588,6 +588,26 @@ section:hover {
 }
 
 
+/* Force correct background on all pages */
+
+/* Desktop default */
+body {
+  background-image: url('bg_desktop.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  body {
+    background-image: url('bg_mobile.jpg') !important;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-attachment: fixed !important;
+  }
+}
+
 
 
 
