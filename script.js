@@ -170,7 +170,7 @@ recog.onresult = function(event) {
 
 // Confetti
 function magicConfetti() {
-  for (let i = 0; i < 500; i++) {
+  for (let i = 0; i < 150; i++) {
     const c = document.createElement("div");
     c.innerHTML = ["🎉","✨","💖","💛","💜","🌟","🧁","🎀","💫","💕","🎀","🥳","🎇","💃🏻","🎈","🎊","🎗️"][Math.floor(Math.random()*6)];
     
@@ -279,6 +279,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
