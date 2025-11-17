@@ -470,10 +470,22 @@ section:hover {
 
 
 .bear {
-  width: 90px;
+  width: 150px;                     /* increased size */
   margin-top: 20px;
   cursor: pointer;
+
+  /* FLOAT ANIMATION YOU ALREADY HAVE */
   animation: bearFloat 3s ease-in-out infinite;
+
+  /* GLOW */
+  filter: drop-shadow(0 0 12px rgba(255, 120, 180, 0.9));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* HOVER / TAP GLOW BOOST */
+.bear:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(255, 160, 210, 1));
 }
 
 @keyframes bearFloat {
@@ -481,6 +493,7 @@ section:hover {
   50% { transform: translateY(-6px); }
   100% { transform: translateY(0px); }
 }
+
 
 
 
