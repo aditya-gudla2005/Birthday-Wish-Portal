@@ -1,29 +1,12 @@
 /* Full-screen background with parallax effect */
 /* Full-screen background with parallax effect */
 /* BACKGROUND WRAPPER */
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -999;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 /* DESKTOP BACKGROUND */
-#background {
-  background-image: url('bg_desktop.jpg');
-}
 
 /* MOBILE BACKGROUND */
-@media (max-width: 768px) {
-  #background {
-    background-image: url('bg_mobile.jpg');
-  }
-}
+
 
 
 
@@ -592,16 +575,25 @@ section:hover {
 
 /* Desktop default */
 /* DESKTOP */
+/* DESKTOP */
 body {
-  background: url('bg_desktop.jpg') center center / cover no-repeat fixed !important;
+  background-image: url('bg_desktop.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   body {
-    background: url('bg_mobile.jpg') top center / cover no-repeat fixed !important;
+    background-image: url('bg_mobile.jpg') !important;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-attachment: fixed !important;
   }
 }
+
+
 
 
 
