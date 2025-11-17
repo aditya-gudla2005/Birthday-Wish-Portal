@@ -96,29 +96,21 @@ function startListening() {
     }
   };
 
-  recog.onresult = function(event) {
-    const command = event.results[0][0].transcript.toLowerCase();
-    console.log("Heard:", command);
-    if (command.includes("poof")) {
+recog.onresult = function(event) {
+
+  // ANYTHING she says triggers the effect
   const cakeImg = document.getElementById("cake");
 
-  // change cake image
   cakeImg.src = "cake_off.png";
 
-  // shake animation
   cakeImg.classList.add("cake-shake");
   setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
 
-  // smoke poof
   smokePoof(cakeImg.parentElement);
 
-  // improved confetti
   magicConfetti();
-} else {
-      // give feedback
-      alert("I heard: " + command + "\nTry saying 'poof' to blow out the candles.");
-    }
-  };
+};
+
 
   recog.onerror = function(e) {
     console.warn("Speech error", e);
@@ -253,6 +245,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
