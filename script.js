@@ -99,7 +99,7 @@ function startListening() {
   recog.onresult = function(event) {
     const command = event.results[0][0].transcript.toLowerCase();
     console.log("Heard:", command);
-    if (command.includes("make a wish")) {
+    if (command.includes("poof")) {
   const cakeImg = document.getElementById("cake");
 
   // change cake image
@@ -116,7 +116,7 @@ function startListening() {
   magicConfetti();
 } else {
       // give feedback
-      alert("I heard: " + command + "\nTry saying 'make a wish' to blow out the candles.");
+      alert("I heard: " + command + "\nTry saying 'poof' to blow out the candles.");
     }
   };
 
@@ -253,6 +253,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
