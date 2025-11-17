@@ -1,5 +1,24 @@
 // Show sections + auto-scroll
 // GLOBAL SNOWFALL
+function unlockPage() {
+  const input = document.getElementById("unlockInput").value.trim();
+  const box = document.querySelector(".lock-box");
+  const msg = document.getElementById("wrongMsg");
+
+  const correctPassword = "monya";  // <<---- SET YOUR PASSWORD HERE
+
+  if (input.toLowerCase() === correctPassword.toLowerCase()) {
+    document.getElementById("lock-screen").style.display = "none";
+  } else {
+    box.classList.add("shake");
+    msg.style.opacity = "1";
+
+    setTimeout(() => {
+      box.classList.remove("shake");
+    }, 300);
+  }
+}
+
 function blowCandles() {
   const cakeImg = document.getElementById("cake");
 
@@ -279,6 +298,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
