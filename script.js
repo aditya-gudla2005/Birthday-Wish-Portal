@@ -108,24 +108,28 @@ function startListening() {
 }
 
 // Confetti
-function confetti() {
-  const total = 120; // how many pieces
-  for (let i = 0; i < total; i++) {
+function magicConfetti() {
+  for (let i = 0; i < 60; i++) {
     const c = document.createElement("div");
-    c.className = "confetti-drop";
-    c.innerHTML = ["🎉","✨","💖","💛","💗"][Math.floor(Math.random()*5)];
-
-    const size = 20 + Math.random() * 20;
-    c.style.fontSize = size + "px";
+    c.innerHTML = "🎉";
+    c.style.position = "fixed";
     c.style.left = Math.random() * 100 + "vw";
-    c.style.animationDuration = (3 + Math.random() * 3) + "s";
-    c.style.opacity = (0.7 + Math.random()*0.3);
-
+    c.style.top = "-20px";
+    c.style.fontSize = (20 + Math.random() * 15) + "px";
+    c.style.transition = "4s";
+    c.style.pointerEvents = "none";
     document.body.appendChild(c);
 
-    setTimeout(() => c.remove(), 6000);
+    setTimeout(() => {
+      c.style.top = "120vh";
+      c.style.opacity = "0";
+      c.style.transform = `rotate(${Math.random()*360}deg)`;
+    }, 50);
+
+    setTimeout(() => c.remove(), 4500);
   }
 }
+
 
 
 
@@ -190,6 +194,22 @@ function playMusic() {
 }
 
 
+
+function createSparkles() {
+  const container = document.getElementById("sparkle-container");
+  setInterval(() => {
+    const s = document.createElement("div");
+    s.className = "sparkle";
+    s.style.left = Math.random() * 100 + "vw";
+    s.style.top = "110vh";
+    s.style.animationDuration = (4 + Math.random() * 4) + "s";
+    container.appendChild(s);
+
+    setTimeout(() => s.remove(), 8000);
+  }, 300);
+}
+
+createSparkles(); // start sparkles
 
 
 
