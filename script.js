@@ -33,45 +33,13 @@ function blowCandles() {
   setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
 
   // smoke
-  smokePoof(cakeImg.parentElement);
 
   // confetti
   magicConfetti();
 }
 
 
-function smokePoof(parent) {
-  const symbols = ["💨","🌫️","💭"];
 
-  for (let i = 0; i < 3; i++) {
-    const p = document.createElement("div");
-    p.className = "poof";
-    p.innerHTML = symbols[i];
-
-    // RANDOM START POSITION above the cake
-    const startX = (Math.random() * 80) - 40; // -40 to +40px left/right
-    const startY = -20 - Math.random() * 20;  // a bit above cake
-
-    p.style.position = "absolute";
-    p.style.left = `calc(50% + ${startX}px)`;
-    p.style.top = `calc(50% + ${startY}px)`;
-    p.style.opacity = "1";
-
-    parent.appendChild(p);
-
-    // RANDOM DRIFT PATH upward
-    const driftX = (Math.random() * 80) - 40;
-    const driftY = -60 - Math.random() * 40;
-
-    requestAnimationFrame(() => {
-      p.style.transition = "1.2s ease-out";
-      p.style.transform = `translate(${driftX}px, ${driftY}px) scale(1.6)`;
-      p.style.opacity = "0";
-    });
-
-    setTimeout(() => p.remove(), 1300);
-  }
-}
 
 
 function createSnow() {
@@ -316,6 +284,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
