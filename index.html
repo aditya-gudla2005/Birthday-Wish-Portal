@@ -5,6 +5,27 @@
   <title>Happy Birthday</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <!-- FIREBASE CDN -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+<script>
+  // Your Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyA8S9pXXJGNrq2mtiSTDoPeL0gF87OejRA",
+    authDomain: "birthday-wish-portal.firebaseapp.com",
+    projectId: "birthday-wish-portal",
+    storageBucket: "birthday-wish-portal.firebasestorage.app",
+    messagingSenderId: "370671086808",
+    appId: "1:370671086808:web:0e5b69956b1a6121aa3bad",
+    measurementId: "G-HE7NBYQRV1"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
 
 </head>
 
@@ -94,6 +115,7 @@ for (let i = 0; i < 40; i++) {
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
