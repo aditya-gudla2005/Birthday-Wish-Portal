@@ -222,10 +222,28 @@ function magicConfetti() {
 
 
 // Make-a-wish behaviour
-function sendWish() {
+async function sendWish() {
   const wishInput = document.getElementById("wishInput");
   const wishBtn = document.querySelector(".wish-btn");
   const area = document.getElementById("angelArea");
+
+  const wishText = wishInput.value.trim();
+
+  if (!wishText) {
+    alert("Type your wish first ✨");
+    return;
+  }
+
+  // --- SAVE TO FIREBASE ---
+  try {
+    await db.collection("wishes").add({
+      wish: wishText,
+      timestamp: Date.now()
+    });
+    console.log("Wish saved!");
+  } catch (err) {
+    console.error("Error saving wish:", err);
+  }
 
   // Hide wish input + button
   wishInput.style.display = "none";
@@ -247,8 +265,7 @@ function sendWish() {
   const text = document.createElement("div");
   text.className = "wish-text";
   text.innerHTML =
-  "Your wish is with the universe now.<br>The universe will do its job.<br>You do your job by staying kind, hopeful… and a little bit magical. ✨";
-
+    "Your wish is with the universe now.<br>The universe will do its job.<br>You do your job by staying kind, hopeful… and a little bit magical. ✨";
 
   // Append elements
   box.appendChild(angel);
@@ -260,6 +277,7 @@ function sendWish() {
     box.classList.add("rise");
   }, 100);
 }
+
 
 
 function playMusic() {
@@ -298,6 +316,7 @@ function createSparkles() {
 }
 
 createSparkles(); // start sparkles
+
 
 
 
