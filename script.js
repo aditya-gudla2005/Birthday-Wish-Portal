@@ -33,7 +33,7 @@ function blowCandles() {
   setTimeout(() => cakeImg.classList.remove("cake-shake"), 500);
 
   // smoke
-
+realSmoke();  
   // confetti
   magicConfetti();
 }
@@ -286,6 +286,29 @@ function createSparkles() {
 createSparkles(); // start sparkles
 
 
+
+function realSmoke() {
+  const cake = document.getElementById("cake");
+  const parent = cake.parentElement;
+
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement("div");
+    p.className = "real-smoke";
+
+    const delay = Math.random() * 0.5;
+    const size = 10 + Math.random() * 25;
+
+    p.style.left = (cake.offsetLeft + cake.offsetWidth/2 + (Math.random()*40 - 20)) + "px";
+    p.style.top = (cake.offsetTop - 10) + "px";
+    p.style.width = size + "px";
+    p.style.height = size + "px";
+    p.style.animationDelay = delay + "s";
+
+    parent.appendChild(p);
+
+    setTimeout(() => p.remove(), 3000);
+  }
+}
 
 
 
