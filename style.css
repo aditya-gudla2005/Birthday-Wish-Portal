@@ -577,21 +577,23 @@ section:hover {
 /* DESKTOP */
 /* DESKTOP */
 body {
-  background-image: url('bg_desktop.jpg') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-attachment: fixed !important;
+  background-image: url('bg_desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* this enables scrolling */
 }
+
 
 /* MOBILE */
 @media (max-width: 768px) {
   body {
-    background-image: url('bg_mobile.jpg') !important;
-    background-size: cover !important;
-    background-position: top center !important;
-    background-attachment: fixed !important;
+    background-image: url('bg_mobile.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
   }
 }
+
 
 
 .smoke {
@@ -642,6 +644,7 @@ body {
   border-radius: 18px;
   box-shadow: 0 0 25px rgba(255,255,255,0.4);
 }
+
 
 
 
