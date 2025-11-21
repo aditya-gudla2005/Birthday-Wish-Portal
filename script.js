@@ -310,6 +310,13 @@ function realSmoke() {
   }
 }
 
+function showDrawing() {
+  playMusic();
+  const sec = document.getElementById("drawing-section");
+  sec.classList.remove("hidden");
+  sec.scrollIntoView({ behavior: "smooth" });
+}
+
 
 
 
