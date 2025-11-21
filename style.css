@@ -635,6 +635,14 @@ body {
 }
 
 
+.drawing-img {
+  width: 80%;
+  max-width: 350px;
+  margin-top: 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
 
 
 
