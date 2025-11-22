@@ -210,45 +210,12 @@ section:hover {
 }
 
 /* Message section */
-#message-section .final-text {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1.4;
-  text-shadow:
-    0 0 12px rgba(255,150,200,0.9),
-    0 0 25px rgba(255,120,180,0.7),
-    0 0 45px rgba(255,100,160,0.5);
-}
-
-#message-section .final-text::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150%;
-  height: 180%;
-  background: radial-gradient(
-    circle,
-    rgba(255,150,200,0.35),
-    rgba(255,100,160,0.15),
-    transparent 70%
-  );
-  filter: blur(30px);
-  z-index: -1;
-}
 
 
-#message-section .final-text {
-  color: #ffffff;
-  text-shadow: none;
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 1.4;
-}
+
+
+
+
 
 /* Wish pink box */
 .wish-box {
@@ -677,6 +644,23 @@ body {
 
 
 
+
+.final-text {
+  margin-top: 40px;
+  padding: 0 25px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.8;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+
+  /* Pink glow */
+  text-shadow:
+    0 0 10px rgba(255, 130, 180, 0.9),
+    0 0 25px rgba(255, 110, 170, 0.6),
+    0 0 45px rgba(255, 100, 160, 0.4);
+}
 
 
 
