@@ -320,9 +320,14 @@ section:hover {
 }
 
 /* Remove glow from birthday message */
-#message-section .final-text {
-  text-shadow: none !important;
+.final-text {
+  color: #fff;
+  text-shadow:
+    0 0 12px rgba(255, 120, 180, 0.9),
+    0 0 22px rgba(255, 120, 180, 0.7),
+    0 0 35px rgba(255, 105, 160, 0.5);
 }
+
 
 
 /* GIFT GRID */
@@ -668,6 +673,7 @@ body {
   border-radius: 18px;
   box-shadow: 0 0 25px rgba(255,255,255,0.4);
 }
+
 
 
 
