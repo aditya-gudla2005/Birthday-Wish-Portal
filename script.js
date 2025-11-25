@@ -5,11 +5,15 @@ function unlockPage() {
   const box = document.querySelector(".lock-box");
   const msg = document.getElementById("wrongMsg");
 
-  const correctPassword = "monya";  // <<---- SET YOUR PASSWORD HERE
+  const encoded = "bW9ueWEyMw==";
+  const correctPassword = atob(encoded);  // <<---- SET YOUR PASSWORD HERE
 
   if (input.toLowerCase() === correctPassword.toLowerCase()) {
     document.getElementById("lock-screen").style.display = "none";
   } else {
+    msg.textContent = "I changed the password for safety ✨";
+    msg.style.opacity = "1";
+    
     box.classList.add("shake");
     msg.style.opacity = "1";
 
@@ -316,6 +320,7 @@ function showDrawing() {
   sec.classList.remove("hidden");
   sec.scrollIntoView({ behavior: "smooth" });
 }
+
 
 
 
