@@ -11,7 +11,7 @@ function unlockPage() {
   if (input.toLowerCase() === correctPassword.toLowerCase()) {
     document.getElementById("lock-screen").style.display = "none";
   } else {
-    msg.textContent = "I changed the password for safety ✨";
+    msg.textContent = "I changed the password for safety ✨ Lemme know if you want the secured password";
     msg.style.opacity = "1";
     
     box.classList.add("shake");
@@ -320,6 +320,7 @@ function showDrawing() {
   sec.classList.remove("hidden");
   sec.scrollIntoView({ behavior: "smooth" });
 }
+
 
 
 
