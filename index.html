@@ -24,70 +24,69 @@
   const db = firebase.firestore();
 </script>
 
-
-
 </head>
 
 <body>
   <div id="lock-screen">
   <!-- FLOATING LOCK MESSAGES -->
 
-<div class="side left-side">
-  <div class="float-msg">
-    You're like autumn…<br>
-    warm, cold, and rainy all at once.<br><br>
+  <div class="side left-side">
+    <div class="float-msg">
+      You're like autumn…<br>
+      warm, cold, and rainy all at once.<br><br>
 
-    The same way you carry<br>
-    happiness, sadness, weirdness,<br>
-    chaos, playfulness.. everything.<br><br>
+      The same way you carry<br>
+      happiness, sadness, weirdness,<br>
+      chaos, playfulness.. everything.<br><br>
 
-    And honestly,<br>
-    that’s the most beautiful thing about you.
+      And honestly,<br>
+      that's the most beautiful thing about you.
+    </div>
+
+    <div class="float-msg">
+      Sometimes the future feels uncertain,<br>
+      sometimes life just feels heavy.<br><br>
+
+      But you being here,<br>
+      being part of this time,<br>
+      somehow makes everything feel lighter.<br>
+      You make it feel worth living.<br><br>
+
+      I'm really grateful<br>
+      I exist in the same moment as you.<br>
+      You're one of the best parts of this world.<br><br>
+
+      So please… don't give up.<br>
+      Stay.
+    </div>
   </div>
 
-<div class="float-msg">
-  Sometimes the future feels uncertain,<br>
-  sometimes life just feels heavy.<br><br>
+  <div class="side right-side">
+    <div class="float-msg">
+      Sometimes you say you're not sensitive,<br>
+      that you cry easily…<br><br>
 
-  But you being here,<br>
-  being part of this time,<br>
-  somehow makes everything feel lighter.<br>
-  You make it feel worth living.<br><br>
+      But I feel like that's something beautiful.<br>
+      Because you feel deeply,<br>
+      you value love and emotions.<br><br>
 
-  I’m really grateful<br>
-  I exist in the same moment as you.<br>
-  You’re one of the best parts of this world.<br><br>
+      And when you care,<br>
+      you care like the best.<br><br>
 
-  So please… don’t give up.<br>
-  Stay.
-</div>
+      You don't have to do it alone.<br>
+      I'll always be here.
+    </div>
 
-<div class="side right-side">
-  <div class="float-msg">
-    Sometimes you say you're not sensitive,<br>
-    that you cry easily…<br><br>
-
-    But I feel like that’s something beautiful.<br>
-    Because you feel deeply,<br>
-    you value love and emotions.<br><br>
-
-    And when you care,<br>
-    you care like the best.<br><br>
-
-    You don’t have to do it alone.<br>
-    I’ll always be here.
+    <div class="float-msg">
+      Life will get messy sometimes,<br>
+      but you'll still find your way through it.<br>
+      You always do.<br>
+      And no matter what happens,<br>
+      you'll never lose what makes you… you.<br>
+      (and yes from now all your wishes are stored securely.)
+    </div>
   </div>
 
-  <div class="float-msg">
-    Life will get messy sometimes,<br>
-    but you’ll still find your way through it.<br>
-    You always do.<br>
-    And no matter what happens,<br>
-    you’ll never lose what makes you… you.
-    (and yes from now all your wishes are stored securely.)<br>
-  </div>
-</div>
-    
   <div class="lock-box">
     <h1>Welcome 🎀</h1>
     <p class="lock-text">Enter the secret password</p>
@@ -103,7 +102,6 @@
   <div id="snow"></div>
   <div id="sparkle-container"></div>
 
-
   <div id="stars"></div>
 <script>
 for (let i = 0; i < 40; i++) {
@@ -115,7 +113,6 @@ for (let i = 0; i < 40; i++) {
   document.getElementById("stars").appendChild(s);
 }
 </script>
-
 
 <audio id="bgMusic" src="bg.mp3" loop></audio>
 
@@ -139,22 +136,22 @@ for (let i = 0; i < 40; i++) {
     <div class="icon">🌠</div>
     <div class="label">Click here to Make a Wish</div>
   </div>
-  <div class="gift-card" onclick="showDrawing()">
-  <div class="icon">🖼️</div>
-  <div class="label">Surprise</div>
-</div>
 
+  <div class="gift-card" onclick="showDrawing()">
+    <div class="icon">🖼️</div>
+    <div class="label">Surprise</div>
+  </div>
 
 </section>
+
   <section id="cake-section" class="hidden">
   <h2>Say "Hello" to blow out the candles 🎤<br>or Click on teddy bear</br></h2>
   <img id="cake" src="cake_on.png" alt="cake">
-    <img id="bear" src="bear.png" class="bear" onclick="blowCandles()">
+  <img id="bear" src="bear.png" class="bear" onclick="blowCandles()">
 
   <button id="listenBtn" onclick="startListening()" class="listen-btn">Start Voice</button>
   <p class="tip">Tip: If it doesn't hear you, tap teddy bear or say "Hello".</p>
 </section>
-
 
 <section id="message-section" class="hidden">
   <p class="final-text">
@@ -199,7 +196,6 @@ Now let me go tease you with these edits I made hehe.😎
   </p>
 </section>
 
-
 <section id="wish-section" class="hidden">
   <h2 class="wish-title">Make a Wish ✨</h2>
 
@@ -213,11 +209,11 @@ Now let me go tease you with these edits I made hehe.😎
   "Your wish is with the universe now.<br>The universe will do its job.<br>You do your job by staying kind, hopeful… and a little bit magical. ✨";
 </h3>
 </section>
+
   <section id="drawing-section" class="hidden">
   <h2 class="wish-title">A Little Something I Drew ✨</h2>
   <img src="drawing.png" class="drawing-img">
 </section>
-
 
 <script src="script.js"></script>
 </body>
