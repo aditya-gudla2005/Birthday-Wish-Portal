@@ -693,35 +693,36 @@ body {
 .float-msg.top {
   top: 8%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
 }
 
 .float-msg.bottom {
   bottom: 8%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
 }
 
 .float-msg.left {
   left: 4%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(0, -50%);
 }
 
 .float-msg.right {
   right: 4%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(0, -50%);
 }
 
 /* FLOAT ANIMATION */
 @keyframes floatSoft {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0%   { transform: translateY(0px) scale(1); }
+  50%  { transform: translateY(-10px) scale(1.02); }
+  100% { transform: translateY(0px) scale(1); }
 }
 
-
-
-
-
+@media (max-width: 768px) {
+  .float-msg {
+    display: none;
+  }
+}
