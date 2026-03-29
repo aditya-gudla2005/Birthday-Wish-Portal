@@ -694,35 +694,60 @@ body {
 }
 
 /* POSITIONS */
-.float-msg.top {
-  top: 3%;
-  left: 50%;
-  transform: translate(-50%, 0);
+.float-msg {
+  position: absolute;
+  width: 260px;
+  padding: 20px;
+  font-size: 15px; /* increased */
+  line-height: 1.6;
+  color: #fff;
+
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 15px rgba(255,215,0,0.08),
+    0 0 30px rgba(255,120,180,0.05);
+
+  text-align: center;
+  pointer-events: none;
+
+  opacity: 0.7;
+  animation: floatSoft 10s ease-in-out infinite;
 }
 
-.float-msg.bottom {
-  bottom: 3%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
+/* LEFT SIDE */
 .float-msg.left {
-  left: 2%;
-  top: 50%;
-  transform: translate(0, -50%);
+  left: 3%;
 }
 
+.float-msg.l1 {
+  top: 25%;
+}
+
+.float-msg.l2 {
+  top: 60%;
+}
+
+/* RIGHT SIDE */
 .float-msg.right {
-  right: 2%;
-  top: 50%;
-  transform: translate(0, -50%);
+  right: 3%;
+}
+
+.float-msg.r1 {
+  top: 25%;
+}
+
+.float-msg.r2 {
+  top: 60%;
 }
 
 /* FLOAT ANIMATION */
 @keyframes floatSoft {
-  0%   { transform: translateY(0px) scale(1); }
-  50%  { transform: translateY(-10px) scale(1.02); }
-  100% { transform: translateY(0px) scale(1); }
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
 }
 
 @keyframes fadeInMsg {
