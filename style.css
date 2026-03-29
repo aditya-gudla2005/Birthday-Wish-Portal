@@ -662,7 +662,64 @@ body {
     0 0 45px rgba(255, 100, 160, 0.4);
 }
 
+/* ===========================
+   FLOATING LOCK MESSAGES
+   =========================== */
 
+.float-msg {
+  position: absolute;
+  width: 240px;
+  padding: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+
+  box-shadow:
+    0 0 20px rgba(255,215,0,0.15),
+    0 0 40px rgba(255,120,180,0.1);
+
+  text-align: center;
+  pointer-events: none;
+
+  animation: floatSoft 6s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+/* POSITIONS */
+.float-msg.top {
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.float-msg.bottom {
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.float-msg.left {
+  left: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.float-msg.right {
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatSoft {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
 
 
 
