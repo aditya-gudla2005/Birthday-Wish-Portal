@@ -688,25 +688,6 @@ body {
   animation: floatSoft 10s ease-in-out infinite;
 }
 
-/* LEFT SIDE */
-
-
-/* FLOAT ANIMATION */
-@keyframes floatSoft {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes fadeInMsg {
-  to { opacity: 0.65; }
-}
-
-@media (max-width: 768px) {
-  .float-msg {
-    display: none;
-  }
-}
 /* SIDE CONTAINERS */
 .side {
   position: absolute;
@@ -716,36 +697,22 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* centers vertically */
-  gap: 30px;                 /* spacing between cards */
+  justify-content: center;
+  gap: 30px;
 }
 
-/* LEFT SIDE */
-.left-side {
-  left: 2%;
+.left-side { left: 2%; }
+.right-side { right: 2%; }
+
+/* FLOAT ANIMATION */
+@keyframes floatSoft {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
 }
 
-/* RIGHT SIDE */
-.right-side {
-  right: 2%;
-}
-
-/* FLOAT CARDS */
-.float-msg {
-  width: 100%;
-}
-.left-side .float-msg:nth-child(1) {
-  margin-left: 10px;
-}
-
-.left-side .float-msg:nth-child(2) {
-  margin-left: 30px;
-}
-
-.right-side .float-msg:nth-child(1) {
-  margin-right: 10px;
-}
-
-.right-side .float-msg:nth-child(2) {
-  margin-right: 30px;
+@media (max-width: 768px) {
+  .side {
+    display: none;
+  }
 }
