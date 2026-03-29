@@ -713,39 +713,30 @@ body {
 
 @media (max-width: 768px) {
 
-  /* Make side containers full width */
   .side {
+    position: static;   /* 🔥 THIS IS THE MISSING PIECE */
     width: 100%;
-    left: 0;
-    right: 0;
+    height: auto;
 
-    align-items: center;   /* center cards horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
-  /* TOP GROUP */
+  /* Top messages */
   .left-side {
-    top: 5%;
-    height: auto;
+    margin-top: 20px;
   }
 
-  /* BOTTOM GROUP */
+  /* Bottom messages */
   .right-side {
-    bottom: 5%;
-    top: auto;
-    height: auto;
+    margin-top: 20px;
   }
 
-  /* Card width for mobile */
   .float-msg {
-    width: 85%;
+    width: 90%;
     max-width: 320px;
     font-size: 14px;
-  }
-
-  /* Remove stagger offsets (looks weird on mobile) */
-  .left-side .float-msg,
-  .right-side .float-msg {
-    margin: 0 !important;
   }
 }
