@@ -759,3 +759,45 @@ body {
     display: none;
   }
 }
+/* SIDE CONTAINERS */
+.side {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centers vertically */
+  gap: 30px;                 /* spacing between cards */
+}
+
+/* LEFT SIDE */
+.left-side {
+  left: 2%;
+}
+
+/* RIGHT SIDE */
+.right-side {
+  right: 2%;
+}
+
+/* FLOAT CARDS */
+.float-msg {
+  width: 100%;
+}
+.left-side .float-msg:nth-child(1) {
+  margin-left: 10px;
+}
+
+.left-side .float-msg:nth-child(2) {
+  margin-left: 30px;
+}
+
+.right-side .float-msg:nth-child(1) {
+  margin-right: 10px;
+}
+
+.right-side .float-msg:nth-child(2) {
+  margin-right: 30px;
+}
