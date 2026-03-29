@@ -712,7 +712,40 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  /* Make side containers full width */
   .side {
-    display: none;
+    width: 100%;
+    left: 0;
+    right: 0;
+
+    align-items: center;   /* center cards horizontally */
+    gap: 20px;
+  }
+
+  /* TOP GROUP */
+  .left-side {
+    top: 5%;
+    height: auto;
+  }
+
+  /* BOTTOM GROUP */
+  .right-side {
+    bottom: 5%;
+    top: auto;
+    height: auto;
+  }
+
+  /* Card width for mobile */
+  .float-msg {
+    width: 85%;
+    max-width: 320px;
+    font-size: 14px;
+  }
+
+  /* Remove stagger offsets (looks weird on mobile) */
+  .left-side .float-msg,
+  .right-side .float-msg {
+    margin: 0 !important;
   }
 }
