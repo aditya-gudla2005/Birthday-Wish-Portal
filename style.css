@@ -691,21 +691,18 @@ body {
 /* SIDE CONTAINERS */
 .side {
   position: absolute;
-
-  top: 50%;
-  transform: translateY(-50%);   /* 🔥 fixes vertical cut */
-
-  width: 260px;
-  max-width: 80vw;
-  box-sizing: border-box;
+  top: 0;
+  height: 100%;
+  width: 300px;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 30px;
 }
 
-.left-side { left: 10px; }
-.right-side { right: 10px; }
+.left-side { left: 2%; }
+.right-side { right: 2%; }
 
 /* FLOAT ANIMATION */
 @keyframes floatSoft {
