@@ -741,3 +741,16 @@ body {
   }
 
 }
+/* DESKTOP WIDE SCREENS */
+@media (min-width: 1200px) {
+
+  .side {
+    width: 340px;   /* was 260px */
+  }
+
+  .float-msg {
+    font-size: 17px;   /* slightly bigger text */
+    padding: 24px;     /* more breathing space */
+  }
+
+}
