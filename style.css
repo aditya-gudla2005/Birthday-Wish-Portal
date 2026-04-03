@@ -690,14 +690,18 @@ body {
 /* SIDE CONTAINERS */
 .side {
   position: absolute;
-  top: 0;
-  height: 100%;
-  width: 300px;
+
+  top: 50%;
+  transform: translateY(-50%);   /* 🔥 REAL FIX */
+
+  width: 260px;
+  max-width: 80vw;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
+
+  box-sizing: border-box;
 }
 
 .left-side { left: 2%; }
