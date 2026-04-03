@@ -697,7 +697,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .left-side { left: 2%; }
