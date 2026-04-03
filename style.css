@@ -702,6 +702,7 @@ body {
   gap: 20px;
 
   box-sizing: border-box;
+  padding: 10px;
 }
 
 .left-side { left: 10px; }
