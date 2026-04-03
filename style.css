@@ -704,8 +704,8 @@ body {
   box-sizing: border-box;
 }
 
-.left-side { left: 2%; }
-.right-side { right: 2%; }
+.left-side { left: 10px; }
+.right-side { right: 10px; }
 
 /* FLOAT ANIMATION */
 @keyframes floatSoft {
@@ -714,27 +714,19 @@ body {
   100% { transform: translateY(0px); }
 }
 
-@media (max-width: 768px) {
+
+@media (max-height: 700px), (max-width: 768px) {
 
   .side {
-    position: static;   /* 🔥 THIS IS THE MISSING PIECE */
+    position: static;        /* 🔥 KEY FIX */
+    transform: none;
+
     width: 100%;
     height: auto;
 
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 20px;
-  }
-
-  /* Top messages */
-  .left-side {
-    margin-top: 20px;
-  }
-
-  /* Bottom messages */
-  .right-side {
-    margin-top: 20px;
+    gap: 15px;
+    margin-top: 15px;
   }
 
   .float-msg {
@@ -742,4 +734,9 @@ body {
     max-width: 320px;
     font-size: 14px;
   }
+
+  #lock-screen {
+    overflow-y: auto;   /* 🔥 allows scrolling if needed */
+  }
+
 }
