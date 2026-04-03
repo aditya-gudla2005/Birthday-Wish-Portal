@@ -691,15 +691,15 @@ body {
 .side {
   position: absolute;
 
-  top: 50%;
-  transform: translateY(-50%);   /* 🔥 REAL FIX */
+  top: 40%;
+  transform: translateY(-40%);   /* 🔥 REAL FIX */
 
   width: 260px;
   max-width: 80vw;
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 
   box-sizing: border-box;
   padding: 10px;
@@ -753,4 +753,10 @@ body {
     padding: 24px;     /* more breathing space */
   }
 
+}
+@media (max-height: 800px) {
+  .float-msg {
+    font-size: 11px;   /* was 12px */
+    padding: 16px;
+  }
 }
